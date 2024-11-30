@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Peddy</title>
+</head>
+
+<body>
+    <!-- header section starts here-->
+    <header>
+        <!-- nav starts here -->
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <img src="images/logo.webp" alt="">
+                <h1 class="text-lg  font-semibold pl-2">Peddy</h1>
+            </div>
+            <div class="navbar-center">
+                <a class="btn btn-ghost text-sm">Home</a>
+                <a class="btn btn-ghost text-sm">Shop</a>
+                <a class="btn btn-ghost text-sm">Contact</a>
+            </div>
+            <div class="navbar-end">
+                <button class="btn btn-ghost btn-circle">
+                    <i class="fa-regular fa-user"></i>
+                </button>
+            </div>
+        </div>
+        <!-- nav ends here -->
+
+        <!-- banner starts here -->
+        <div class="flex flex-col items-center justify-center mt-4 mb-2 text-center px-4 pt-2 pb-4 space-y-4">
+            <h3 class="text-lg font-bold text-gray-400">Bringing Families Together ❤️‍🔥</h3>
+            <h1 class="text-4xl font-bold">Your Path to Adoption Starts Here</h1>
+            <p class="text-lg font-semibold max-w-lg">
+                Adopting a pet means gaining a loyal companion and giving a loving animal a second chance at life. Every wagging tail
+                or gentle purr is a testament to the love you share.
+
+            </p>
+            <button class="btn btn-active btn-accent text-white"><a href="#main">View More</a></button>
+            <img src="images/pet.webp" alt="">
+        </div>
+
+        <!-- banner ends here -->
+
+    </header>
+    <!--  body section starts here -->
+    <main id="main">
+        <div class="flex flex-col items-center justify-center text-center px-4 pt-0 pb-2 space-y-4">
+            <h1 class="text-5xl font-bold">Adopt Your Best Friend</h1>
+            <p class="text-base font-medium">
+                Bringing joy and companionship to your life, every adoption helps a loving pet find their forever home. <br>
+                Discover the happiness of unconditional love today.
+            </p>
+
+        </div>
+        <!-- category buttons -->
+        <nav id="categories" class="flex justify-center gap-4 mt-4 mb-8"></nav>
+        <!--Best Deal  -->
+        <div class="flex justify-around items-center mb-4">
+            <h1 class="text-3xl font-bold">Best Deal For you</h1>
+            <button onclick="sortPet()" class="btn btn-active btn-accent text-white">Sort By Price</button>
+        </div>
+        <!-- Card Section -->
+        <section class="w-11/12 mx-auto py-10 px-10">
+            <div class="spineer">
+
+            </div>
+            <div class="grid grid-cols-2" id="cards-container" style="grid-template-columns: 8fr 2fr;">
+
+                <div id="cards" class="grid grid-cols-3 gap-5">
+                    <!-- Dynamic cards will be inserted here -->
+                </div>
+                <div id="likedPets" class="ml-4">
+                    <!-- <h1>Liked Pets will go here</h1> -->
+                </div>
+            </div>
+        </section>
+        <footer class="bg-black p-24">
+            <div class="grid grid-cols-3 gap-4 place-items-center">
+                <div>
+                    <div class="flex gap-2 mb-2">
+                        <img src="images/logo.webp" alt="">
+                        <p class="text-white text-xl font-bold">Peddy</p>
+                    </div>
+                    <div class="text-gray-400 text-sm gap-2 mb-2">
+                        <p>Location: av. Washington 165, NY CA 54003</p>
+                        <p>Phone: +31 85 964 47 25</p>
+                        <p>Email: info@yourdomain.com</p>
+                        <p>Openings hours: 9.00 AM - 5.00 PM</p>
+                    </div>
+                    <div class="text-white text-xl gap-2">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="text-white font-semibold text-lg mb-2">Useful Links</h1>
+                    <div class="text-gray-400 text-sm gap-4">
+                        <p>Home</p>
+                        <p>About Us</p>
+                        <p>Animals</p>
+                        <p>Foundation</p>
+                        <p>Contact</p>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="text-white font-semibold text-lg mb-2">Drop a Message</h1>
+                    <input type="text" placeholder="Enter your email"
+                        class="input input-bordered w-full max-w-xs mb-2" /> <br>
+                    <button class="btn btn-accent text-white w-full max-w-xs">Subscribe</button>
+                </div>
+            </div>
+
+
+        </footer>
+
+    </main>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <button id="showModal1" class="btn hidden" onclick="my_modal_1.showModal()">open modal</button>
+    <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+            <div id="modal1-content">
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+
+
+    <!-- Open the modal using ID.showModal() method -->
+    <button id="showModal2" class="btn hidden" onclick="my_modal_2.showModal()">open modal</button>
+    <dialog id="my_modal_2" class="modal">
+        <div class="modal-box">
+            <div id="modal2-content">
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <!-- <button class="btn">Close</button> -->
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <!-- Link to the JavaScript file -->
+    <script src="fetchAPI.js"></script>
+</body>
+
+</html>

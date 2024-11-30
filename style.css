@@ -1,0 +1,33 @@
+.category_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #fdfdfd;
+    color: rgb(143, 143, 143);
+    padding: 10px 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 1px solid gray;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category_btn:hover {
+    background-color: #ecafaf;
+}
+
+.category_btn:focus {
+    outline: 2px solid #333333;
+    outline-offset: 2px;
+}
+
+.liked-image {
+    width: auto;
+    height: auto;
+    margin: 10px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+
+}
