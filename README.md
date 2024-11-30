@@ -1,0 +1,1 @@
+This project is build with JS ES6, tailwind css, daisy UI. This a short demo project of pet website. The Data is fetched from API. User can search, short by category and price pets, like pets(user can like a pet only once),adopt pets.This project is only responsive for big screens
